@@ -9,16 +9,19 @@
 /* FORMATO GRID */
 .container {
     display: grid;
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(11, auto);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "header header header"
         "carrusel carrusel carrusel"
         "sec1 sec1 sec1"
-        "widget-1 widget-2 widget-3"
-        "sec2 sec2 sec2"
         "cartelera cartelera cartelera"
+        "sec2 sec2 sec2"
+        "promociones promociones promociones"
         "sec3 sec3 sec3"
+        "sec4 sec4 sec4"
+        "widget-1 widget-2 widget-3"
+        "sec5 sec5 sec5"
         "footer footer footer"
     ;
     background-color: #191919;
@@ -71,6 +74,13 @@
 
 .navbar li:hover {
     background-color: lightsteelblue;
+}
+
+@media screen and (min-width: 781px) {
+    .navbar {
+        display: flex;
+        /* Muestra el contenido del nav en pantallas grandes */
+    }
 }
 
 @media screen and (max-width: 780px) {
@@ -132,9 +142,19 @@
     grid-area: sec3;
 }
 
+.sec4 {
+    grid-area: sec4;
+}
+
+.sec5 {
+    grid-area: sec5;
+}
+
 .sec1,
 .sec2,
-.sec3 {
+.sec3,
+.sec4,
+.sec5 {
     padding: 2%;
     color: white;
     text-align: justify;
@@ -142,8 +162,48 @@
 
 .sec1,
 .sec2,
-.sec3 p {
+.sec3,
+.sec4,
+.sec5,
+p {
     font-size: 20px;
+}
+
+
+/* PROMOCIONES */
+.promociones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: promociones;
+}
+
+.promociones-img {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: 50px;
+}
+
+.promociones-img img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.img-1 {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.img-4 {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.promociones-img img:hover {
+    width: 100px;
 }
 
 /* UBICACIÓN */
@@ -264,6 +324,12 @@ iframe {
     /* Tamaño de fuente más grande */
 }
 
+.form {
+    background-color: #404040;
+    border-radius: 10px;
+    padding: 8px;
+}
+
 .formulario select,
 .formulario input {
     font-size: 16px;
@@ -335,18 +401,21 @@ iframe {
 
 @media screen and (max-width: 780px) {
     .container {
-        grid-template-rows: repeat(10, auto);
+        grid-template-rows: repeat(12, auto);
         grid-template-columns: 100%;
         grid-template-areas:
             "header"
             "carrusel"
             "sec1"
+            "cartelera"
+            "sec2"
+            "promociones"
+            "sec3"
+            "sec4"
             "widget-1"
             "widget-2"
             "widget-3"
-            "sec2"
-            "cartelera"
-            "sec3"
+            "sec5"
             "footer";
     }
 
@@ -373,7 +442,7 @@ iframe {
 /* PHP */
 .php-container {
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
         "header"

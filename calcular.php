@@ -85,18 +85,19 @@ switch ($peli) {
 <body>
     <div class="php-container">
         <!-- HEADER -->
-        <header class="header" id="p1">
+        <header class="header" id="p0">
             <logo class="logo"><img src="gallery/logo.png" alt=""></logo>
             <h1>CINE RETRO OLAVARRIA</h1>
             <nav class="nav">
                 <ul class="navbar">
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="#p5">CARTELERA</a></li>
+                    <li><a href="index.html" target="_blank">INICIO</a></li>
+                    <li><a href="index.html#p4" target="_blank">PROMOCIONES</a></li>
+                    <li><a href="index.html#p6" target="_blank">RESERVA</a></li>
+
                 </ul>
             </nav>
         </header>
-
-        <!-- SECCIÓN 1 -->
+        <!-- SECCION 1 -->
         <section class="sec1" id="p6">
             <h2>¡SU RESERVA HA SIDO REALIZADA!</h2>
             <br>
@@ -132,7 +133,8 @@ switch ($peli) {
                     </p>
                     <h3>Fecha</h3>
                     <p>
-                        <?php echo $fecha, (" - "); echo$hora; ?>
+                        <?php echo $fecha, (" - ");
+                        echo $hora; ?>
                     </p>
                 </div>
             </div>
@@ -148,6 +150,7 @@ switch ($peli) {
 
 
         </section>
+        <!-- FOOTER -->
 
         <footer class="footer" id="p9">
             <div class="footer-content">
